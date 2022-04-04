@@ -1,0 +1,62 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+}
+
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.item button{
+  width: 200px;
+  height: 80px;
+  font-size: 35px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: #f1f1f1;
+  font-weight: 400;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+
+}
+
+.item button::after{
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 100px;
+  border: 2px solid black;
+  top: -10px;
+  left: -10px;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+
+
+}
+
+.item button:hover::after{
+  opacity: 1;
+}
+
+
+
+
+
+
